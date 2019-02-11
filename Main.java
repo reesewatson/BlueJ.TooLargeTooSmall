@@ -8,15 +8,17 @@
 public class Main
 {
     // instance variables - replace the example below with your own
-    private int x;
-
+    private int y;
+    private int z;
+    
     /**
      * Constructor for objects of class Main
      */
     public Main()
     {
         // initialise instance variables
-        x = 0;
+        int y = 9;
+        int z = 7;
     }
 
     /**
@@ -28,6 +30,6 @@ public class Main
     public int sampleMethod(int y)
     {
         // put your code here
-        return x + y;
+        return y + z;
     }
 }
