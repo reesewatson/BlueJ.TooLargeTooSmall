@@ -1,35 +1,30 @@
+ 
+import java.util.Scanner;
 
-/**
- * Write a description of class Main here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Main
-{
-    // instance variables - replace the example below with your own
-    private int y;
-    private int z;
-    
-    /**
-     * Constructor for objects of class Main
-     */
-    public Main()
-    {
-        // initialise instance variables
-        int y = 9;
-        int z = 7;
-    }
+public class Main {
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return y + z;
+    public static void main(String[] args) {
+        int secretNumber;
+        secretNumber = (int) (Math.random() * 77);
+
+        Scanner input = new Scanner(System.in);
+        int guess;
+        int count = 0;
+        do {
+            System.out.print("Enter a guess: (1-77) ");
+            guess = input.nextInt();
+            System.out.println("Your guess is " + guess);
+            if (guess == secretNumber)
+                System.out.println("Congratulations! Your guess is correct.");
+
+            else if (guess < secretNumber)
+                System.out.println("Your guess is smaller than the secret number.");
+
+            else if (guess > secretNumber)
+                System.out.println("Your guess is greater than the secret number.");
+            count = count + 1;
+
+        } while (guess != secretNumber);
+        System.out.println("Your number of guesses is: " + count);
     }
-}
+} 
